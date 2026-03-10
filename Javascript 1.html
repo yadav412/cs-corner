@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The CS Corner</title>
+    <link rel="stylesheet" href="webdev.css">
+</head>
+<body>
+
+<ul>
+  <li><a href="Javascript 1.html">Javascript(1)</a></li>
+
+  <li><a href="index.html">API's(1)</a></li>
+
+</ul>
+
+
+<h1>Javascript Lesson 1</h1>
+
+<p>Part of the basics of web development alongside HTML and CSS. Can be run in the browser or server side using Node.js.</p>
+<p>JavaScript is primarily a high-level scripting language.</p>
+
+<h3>Linking JavaScript</h3>
+
+<p>Inline in HTML:</p>
+<pre><code id="code">
+&lt;script&gt;
+    console.log("Hello there");
+&lt;/script&gt;
+</code></pre>
+<button onclick="copyCode('code')">Copy</button>
+
+<p>External JS file:</p>
+<pre><code id="code2">
+&lt;script src="jsfile.js"&gt;&lt;/script&gt;
+</code></pre>
+<button onclick="copyCode('code2')">Copy</button>
+
+<h3>Hello World</h3>
+<p>Output to console using <code>console.log()</code>:</p>
+<pre><code id="code3">
+console.log("Hello there");
+</code></pre>
+<button onclick="copyCode('code3')">Copy</button>
+
+<h3>Variables</h3>
+<pre><code id="code4">
+let age = 18;      // mutable
+const name = "Yadav"; // immutable
+</code></pre>
+<button onclick="copyCode('code4')">Copy</button>
+
+<h3>Functions</h3>
+<pre><code id="code5">
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+console.log(greet("Yadav"));
+</code></pre>
+<button onclick="copyCode('code5')">Copy</button>
+
+<h3>Loops</h3>
+
+<h4>While Loop</h4>
+<pre><code id="code7">
+let i = 0;
+while(i < 5){
+    console.log(i);
+    i++;
+}
+</code></pre>
+<button onclick="copyCode('code7')">Copy</button>
+
+<h4>For Loop</h4>
+<pre><code id="code8">
+for(let i=0; i<5; i++){
+    console.log(i);
+}
+</code></pre>
+<button onclick="copyCode('code8')">Copy</button>
+
+<h4>For-of Loop</h4>
+<pre><code id="code9">
+let fruits = ["apple", "banana"];
+for(let fruit of fruits){
+    console.log(fruit);
+}
+</code></pre>
+<button onclick="copyCode('code9')">Copy</button>
+
+<h3>Events</h3>
+<p>Respond to user actions:</p>
+<button id="myBtn">Click Me</button>
+<pre><code id="code10">
+document.getElementById("myBtn").addEventListener("click", () => {
+    alert("Button clicked!");
+});
+</code></pre>
+<button onclick="copyCode('code10')">Copy</button>
+
+<h3>Collection of Everything Learned</h3>
+<pre><code id="code11">
+function namesake(name){
+    let ages = [12,21,23,19];
+    for(let age of ages){
+        console.log(age);
+    }
+
+    // Example event
+    let i = 0;
+    while(i < 4){
+        document.getElementById("myBtn").addEventListener("click", () => {
+            alert("clicked");
+        });
+        i++;
+    }
+}
+</code></pre>
+<button onclick="copyCode('code11')">Copy</button>
+
+<script>
+function copyCode(codeid){
+    const code = document.getElementById(codeid).innerText;
+    navigator.clipboard.writeText(code)
+        .then(() => alert('Copied!'))
+        .catch(err => console.error('Failed', err));
+}
+</script>
+
+<footer>
+    <p>Created by Yadav Singh</p>
+</footer>
+
+</body>
+</html>

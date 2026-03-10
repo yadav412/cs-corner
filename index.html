@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <title>The CS corner</title>
+    <link rel="stylesheet" href="webdev.css">
+  
+</head>
+
+<body>
+<ul>
+  <li><a href="Javascript 1.html">Javascript(1)</a></li>
+  <li><a href="index.html">API's(1)</a></li>
+</ul>
+
+    <h1>API's lesson 1</h1>
+    <h3>API- Application Programming Interfaces</h3>
+    <p>Set of rules used to intergrated external software services(payment,maps) without building their own services from scratch.</p>
+    <p>Endpoints/URI's - URI's- Uniform resource identifier - unique identifers for resources.  </p>
+    <h3>Example</h3>
+    <pre><code id="code">fetch(URL)</code></pre>
+
+    <button onclick="copyCode('code')">Copy</button>
+    
+    
+    <h2>Main types of API's</h2>
+    <h4>REST- Representational State Transfer - uses https to fetch data from a external server </h4>
+    <pre><code id ="code2">Client(user/coder)-> Server: request/interacts with data -> Client : confirms on action on data</code></pre>
+    <button onclick="copyCode('code2')">Copy</button>
+    
+    <h3>HTTP methods</h3>
+    <p>"GET"- retrives data from a collection of data (read)</p>
+    <pre><code id ="code3">
+        fetch('https://api.example.com/data')</code>
+    </pre>
+    <button onclick="copyCode('code3')">Copy</button>
+    
+    <p>"POST" - creates a new resource within the collection (write)</p>
+    <pre><code id ="code4">
+        fetch('https://api.example.com/data',{ <br>
+           method : 'POST', <br>
+           body: JSON.stringify({name:'Yadav'})
+        })
+    </code></pre>
+    <button onclick="copyCode('code4')">Copy</button>
+
+    <p>"PUT" - updates an existing resource (complete overhaul)</p>
+    <pre><code id ="code5">
+        fetch('https://api.example.com/data',{<br>
+            method: 'PUT',<br>
+            body: JSON.stringify ({name:'Yadav Updated',age :21})
+        })
+    </code></pre>
+    <button onclick="copyCode('code5')">Copy</button>
+
+    <p>"PATCH" - performs a partial change - "patch work change" (update)</p>
+    <pre><code id ="code6">
+        fetch('https://api.example.com/data',{<br>
+            method:'PATCH',<br>
+            body: JSON.stringify ({age :22})
+    })
+    </code></pre>
+    <button onclick="copyCode('code6')">Copy</button>
+
+    <p>"Delete" - the 'nuke' deletes a resource</p>
+    <pre><code  id ="code7">
+        fetch('https://api.example.com/data',{<br>
+            method:'DELETE', <br>
+        })
+    </code></pre>
+    <button onclick="copyCode('code7')">Copy</button><br>
+    <br>
+
+
+    <a class ="highlight" href="">Making your own REST API</a>
+    
+
+
+
+    <footer>
+    <p>Created by Yadav Singh</p>
+    </footer>
+    
+</body>
+
+<script>
+function copyCode(codeid){
+    const code =document.getElementById(codeid).innerText;
+    navigator.clipboard.writeText(code)
+        .then(()=>alert('Copied'))
+        .catch(err=>console.error('failed',err));
+}
+</script>
+
+
+
+</html>
