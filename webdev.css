@@ -6,6 +6,7 @@
   margin: 5px 0;
   font-family: monospace;
   padding: 10px;
+  max-width: 40%;
 }
 .highlight {
   color: blue;
@@ -30,4 +31,9 @@ pre {
   padding: 10px;
   border-radius: 5px;
   overflow-x: auto;
+  max-width: 90%;
+}
+
+body{
+    padding-left:50px;
 }
